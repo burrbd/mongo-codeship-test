@@ -1,0 +1,8 @@
+db:
+    build:
+        dockerfile_path: Dockerfile
+    expose:
+        - "27017"
+    command: --smallfiles
+    volumes:
+        - .:/mongo
