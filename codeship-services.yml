@@ -1,5 +1,7 @@
 db:
-    build:
-        dockerfile_path: Dockerfile
-    volumes:
-        - .:/mongo
+  image: mongo:2.6
+test:
+  build:
+    dockerfile_path: Dockerfile
+  links:
+    - db
